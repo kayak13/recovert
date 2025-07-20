@@ -1,3 +1,4 @@
+html_content = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,6 +60,35 @@
       font-size: 0.9rem;
       font-style: italic;
     }
+    form {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 2rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.3rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    form label {
+      font-weight: bold;
+    }
+    form button {
+      margin-top: 1.5rem;
+      background-color: #1c1c1c;
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
     footer {
       text-align: center;
       font-size: 0.85rem;
@@ -91,6 +121,47 @@
 
     <a class="cta" href="recovert-guide.pdf" download>Download the Free Recovert™ Guide</a><br/>
     <a class="cta" href="https://instagram.com/emotionaldamagecontrol" target="_blank">Follow the Chaos Feed</a>
+
+    <form action="https://formsubmit.co/YOUR@EMAIL.COM" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_subject" value="New Recovert Submission">
+
+      <label>First Name:<br>
+        <input type="text" name="First Name" required>
+      </label><br><br>
+
+      <label>Last Name:<br>
+        <input type="text" name="Last Name" required>
+      </label><br><br>
+
+      <label>Birthday:<br>
+        <input type="date" name="Birthday" required>
+      </label><br><br>
+
+      <label>Address:<br>
+        <input type="text" name="Address" required>
+      </label><br><br>
+
+      <label>Phone Number:<br>
+        <input type="tel" name="Phone" required>
+      </label><br><br>
+
+      <label>Email Address:<br>
+        <input type="email" name="Email" required>
+      </label><br><br>
+
+      <label>What are you currently navigating?<br>
+        <textarea name="Problems At Hand" rows="5" placeholder="This is your space. Say it raw." required></textarea>
+      </label><br><br>
+
+      <button type="submit">Submit Securely</button>
+    </form>
+
+    <p style="font-size: 0.85rem; color: #777; margin-top: 1rem;">
+      🔒 Your information will be sent directly and privately. We don’t store it. We don’t track it. And we damn sure don’t sell it.
+    </p>
+
   </section>
 
   <footer>
@@ -99,3 +170,10 @@
   </footer>
 </body>
 </html>
+"""
+
+# Save the HTML file
+html_file = Path("/mnt/data/index.html")
+html_file.write_text(html_content)
+
+html_file.name 
